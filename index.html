@@ -18,12 +18,13 @@
         <input class="form-control" placeholder="Search Name" ng-model="search.name"/>
         <input class="form-control" placeholder="Search Location" ng-model="search.current_location.name"/>
 
-        <select class="input-medium" ng-model="order">
-          <option value = "name">Name</option>
+        <select class="input-medium" ng-init="myselect = options[0]" ng-model="myselect" ng-options="o as o for o in options">
+          <!--<option ng-model="myselect" ng-options="o as o for o in options"></option>-->
+              <!--Name</option>
           <option value = "friend_count">#Friends</option>
           <option value = "current_location.city">City</option>
           <option value = "current_location.state">State</option>
-          <option value = "current_location.country">Country</option>
+          <option value = "current_location.country">Country</option>-->
         </select>
 
         <select class="input-medium" ng-model="sortAD">
@@ -33,7 +34,7 @@
 
       </div>
     </form>
-    <ul ng-repeat = "friend in friends | filter: search | orderBy: order:sortAD">
+    <ul ng-repeat = "friend in friends | filter: search | orderBy: myselect:sortAD">
       <li class='friend'>
         <img class="profile-pic" src='{{friend.pic_square}}'>
 

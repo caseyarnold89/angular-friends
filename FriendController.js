@@ -1,7 +1,7 @@
 angular.module("app").controller("mainCtrl", function($scope){
     $scope.test = "hello world";
     $scope.search = {current_location: {}};
-    $scope.order = {};
+    $scope.options = ["Name", "#Friends", "City", "State", "Country"];
     $scope.sortAD = false;
     $scope.friends = [
         {
@@ -112,7 +112,7 @@ angular.module("app").controller("mainCtrl", function($scope){
         "pic_square": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/623709_10053698_1875866361_q.jpg",
         "current_location": null,
         "status": {
-            "message": "I'm pretty excited at the prospect of having the option for cold water out of the faucet. Not just turning it all the way to the right and getting \"less hot\" water",
+            "message": "I'm pretty excited at the prospect of having the name for cold water out of the faucet. Not just turning it all the way to the right and getting \"less hot\" water",
             "time": "1380735264",
             "status_id": "10102919605598871",
             "comment_count": "0"
